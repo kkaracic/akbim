@@ -1027,7 +1027,40 @@ section {
   html {
     scroll-behavior: smooth;
   }
+
+/* Mobile navbar styles */
+@media (max-width: 768px) {
+  nav {
+    padding: 0.5rem 1rem; /* manji padding da ne zauzima prostor */
+  }
+
+  .logo {
+    height: 50px; /* manji logo */
+  }
+
+  .nav-links {
+    display: none; /* sakrij normalne linkove */
+  }
+
+  .hamburger {
+    display: flex; /* prikaži hamburger dugme */
+  }
+
+  .mobile-menu {
+    top: 60px; /* ispod navbar-a */
+    background: rgba(17, 17, 17, 0.95);
+    padding: 1rem;
+  }
+
+  .mobile-menu ul li a {
+    font-size: 1.2rem;
+    text-align: center;
+    display: block;
+    padding: 0.75rem 0;
+  }
+}
+
   
-  
+
 
   
