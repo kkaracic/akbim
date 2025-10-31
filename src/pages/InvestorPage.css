@@ -1,0 +1,352 @@
+/* General reset / GitHub-like font */
+body, button, input, select {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #24292f;
+}
+
+.investor-shell {
+  display: flex;
+  min-height: 100vh;
+  background-color: #fcfdfe; /* svjetlija glavna pozadina */
+}
+
+/* Sidebar */
+.progress {
+  position: relative;
+  width: 220px;
+  padding: 24px 16px;
+  background: #2da44e; /* zelena kao dugmad */
+  border-right: 1px solid #d0d7de;
+  color: white;
+}
+
+.progress-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+/* Timeline linija */
+.progress ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+/* Timeline linija */
+.progress ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 7px; /* pomjereno da bude u centru kruga */
+  width: 2px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* Timeline item */
+.progress li {
+  position: relative;
+  padding: 6px 0 6px 28px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.progress li::before {
+  content: "";
+  position: absolute;
+  left: 8px;  /* isti offset kao linija */
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;   /* manji krug */
+  height: 10px;
+  background: #2da44e;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+
+.progress li.active {
+  font-weight: 600;
+  color: white;
+}
+
+.progress li.active::before {
+  background: white;
+}
+
+
+/* Timeline circle */
+.progress li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: transparent;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.progress li.active::before {
+  background: #fff;
+}
+
+/* Main content */
+.investor-content {
+  flex: 1;
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Step title (izvan kartice) */
+.step-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #24292f;
+}
+
+/* Card */
+.card {
+  background: #fcfdfe; /* ista boja kao glavna pozadina */
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 0 rgba(27, 31, 36, 0.04);
+}
+
+.card h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.card p.subtext {
+  font-size: 13px;
+  color: #57606a;
+  margin-bottom: 16px;
+}
+
+/* Labels & inputs */
+label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+label input,
+label select {
+  display: block;
+  margin-top: 6px;
+  padding: 6px 8px;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Button group */
+.btn-group {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.btn-group button {
+  flex: 1;
+  padding: 8px 12px;
+  background: #f6f8fa;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-group button:hover {
+  background: #f3f4f6;
+}
+
+/* Nav buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.nav-buttons .back-btn {
+  padding: 6px 16px;
+  border-radius: 6px;
+  border: 1px solid #2da44e;
+  background: #fff;
+  color: #2da44e;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-buttons .back-btn:hover {
+  background: #f3f4f6;
+}
+
+.nav-buttons .next-btn {
+  padding: 6px 16px;
+  border-radius: 6px;
+  border: 1px solid #2da44e;
+  background: #2da44e;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-buttons .next-btn:hover {
+  background: #2c974b;
+  border-color: #2c974b;
+}
+
+.back-btn {
+  padding: 6px 16px;
+  border-radius: 6px;
+  border: 1px solid #2da44e;
+  background: #fff;
+  color: #2da44e;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.back-btn:hover {
+  background: #f3f4f6;
+}
+
+
+/* Overview */
+.overview p {
+  margin: 4px 0;
+}
+
+/* Landing page styling */
+.landing {
+  text-align: center;
+  padding: 2rem;
+}
+
+.landing-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.landing-subtitle {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.investor-types {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.type-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 260px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.type-card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.type-card p {
+  flex-grow: 1;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.type-card button {
+  background-color: #198754; /* zelena */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.type-card button:hover {
+  background-color: #157347;
+}
+
+/* Metric cards */
+.metric-card {
+  background: #eaf6ee;
+  border: 1px solid #d0e9d5;
+  border-radius: 8px;
+  padding: 14px;
+  text-align: center;
+  box-shadow: 0 1px 0 rgba(27, 31, 36, 0.04);
+}
+.metric-title {
+  font-size: 13px;
+  color: #356b47;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+.metric-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f5a33;
+}
+
+/* Simple SVG chart */
+.chart-wrap {
+  background: #fff;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  padding: 12px;
+  box-shadow: 0 1px 0 rgba(27,31,36,0.04);
+}
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #57606a;
+  margin-bottom: 8px;
+}
+.chart-svg {
+  width: 100%;
+  height: 220px;
+  display: block;
+}
+.axis-zero {
+  stroke: #d0d7de;
+  stroke-width: 0.8;
+}
+.line-path {
+  fill: none;
+  stroke: #2da44e;
+  stroke-width: 2;
+}
+
+

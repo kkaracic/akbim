@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "leaflet/dist/leaflet.css";
+
+
+body {
+  font-family: 'Inter', sans-serif;
+   margin: 0;
+  padding: 0;
+}
+@layer utilities {
+  .animate-fadeInUp {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 0.5s;
+  }
+
+  .animation-delay-700 {
+    animation-delay: 0.7s;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(1.5rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+
+.leaflet-top.leaflet-right {
+  top: 60px; /* Pomjera zoom dole da se ne preklapa sa searchom */
+}
+
+.leaflet-control-geosearch {
+  background: white;
+  border-radius: 4px;
+  padding: 2px;
+  top: 10px !important;
+  right: auto !important;
+  transform: none !important;
+  width: auto !important;
+  max-width: 300px;
+   position: absolute !important;
+  left: 10px !important;
+  z-index: 1000 !important;
+  width: 300px !important; /* ili kolika ti treba */
+}
+
+.leaflet-top.leaflet-left .leaflet-control-geosearch {
+  margin-top: 10px;
+  margin-left: 10px;
+  right: auto !important;
+  left: 10px !important;
+  top: 10px !important;
+  transform: none !important;
+}
+
+.leaflet-control-geosearch {
+ 
+}
+
+.leaflet-control-zoom {
+  position: absolute !important;
+  top: 70px !important; /* pomjeri malo niže da ne preklapa geosearch */
+  right: 10px !important;
+  z-index: 1000 !important;
+}
+
+
+

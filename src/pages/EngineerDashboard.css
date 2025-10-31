@@ -1,0 +1,489 @@
+/* General reset / GitHub-like font */
+body, button, input, select {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #24292f;
+}
+
+.investor-shell {
+  display: flex;
+  min-height: 100vh;
+  background-color: #fcfdfe; /* svjetlija glavna pozadina */
+}
+
+/* Main content */
+.investor-content {
+  flex: 1;
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Step title (izvan kartice) */
+.step-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #24292f;
+}
+
+
+
+/* Labels & inputs */
+label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+label input,
+label select {
+  display: block;
+  margin-top: 6px;
+  padding: 6px 8px;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* Nav buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.nav-buttons .back-btn {
+  padding: 6px 16px;
+  border-radius: 6px;
+  border: 1px solid #2da44e;
+  background: #fff;
+  color: #2da44e;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-buttons .back-btn:hover {
+  background: #f3f4f6;
+}
+
+.nav-buttons .next-btn {
+  padding: 6px 16px;
+  border-radius: 6px;
+  border: 1px solid #2da44e;
+  background: #2da44e;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-buttons .next-btn:hover {
+  background: #2c974b;
+  border-color: #2c974b;
+}
+
+
+/* ===== SIDEBAR ANIMACIJA ===== */
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 30;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 260px;
+  background: #2da44e !important;
+  color: white;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  z-index: 40;
+  transform: translateX(-100%);
+  animation: slideIn 0.35s forwards ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Animacije */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+/* FADE-OUT ZA OVERLAY */
+@keyframes fadeOutOverlay {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.fade-out {
+  animation: fadeOutOverlay 0.35s forwards;
+}
+
+/* SLIDE-OUT ZA SIDEBAR */
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.slide-out {
+  animation: slideOut 0.35s forwards ease-in;
+}
+
+/* VEĆ POSTOJEĆE OSTAVLJAMO NEPROMIJENJENO
+   SLUŽE ZA OTVARANJE */
+.fade-in {
+  animation: fadeIn 0.35s forwards;
+}
+
+.slide-in {
+  animation: slideIn 0.35s forwards ease-out;
+}
+
+
+/* Stil za meni u sidebaru */
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 1.1rem;
+}
+
+.sidebar nav a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.sidebar nav a:hover {
+  opacity: 0.8;
+}
+
+/* Dashboard wrapper - make room for fixed navbar */
+.dashboard-wrapper {
+  padding-top: 40px; /* adjust to navbar height */
+  background: #fcfdfe;
+  min-height: calc(100vh - 80px);
+  color: #24292f; /* match your body color */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Inner container — center content and limit width */
+.dashboard-inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+/* On wider screens show header content in row */
+@media (min-width: 768px) {
+  .dashboard-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.dashboard-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  color: #0f172a;
+}
+
+.dashboard-sub {
+  margin: 6px 0 0 0;
+  font-size: 14px;
+  color: #57606a;
+}
+
+/* Buttons row */
+.dashboard-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Primary (green CTA) */
+.btn-primary {
+  background-color: #198754;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(25,135,84,0.18);
+  transition: transform 0.14s ease, box-shadow 0.14s ease, background-color 0.14s ease;
+}
+.btn-primary:hover { transform: translateY(-2px); background-color: #177246; }
+
+/* Secondary buttons */
+.btn-secondary {
+  background: #f6f8fa;
+  color: #24292f;
+  border: 1px solid #d0d7de;
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-secondary:hover { background: #f3f4f6; }
+
+/* Section title */
+.section-title {
+  margin: 8px 0 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #24292f;
+}
+
+/* Grid for projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+/* Two-column at md and above, keep responsive */
+@media (min-width: 640px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Project card */
+.project-card {
+  background: #ffffff;
+  border: 1px solid #e6e9ee;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* subtle elevation */
+.card-shadow {
+  box-shadow: 0 4px 14px rgba(18, 23, 28, 0.06);
+}
+
+/* thumbnail wrapper */
+.thumb-wrap {
+  position: relative;
+  height: 180px; /* M size */
+  overflow: hidden;
+}
+
+/* image */
+.thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s cubic-bezier(.2,.9,.2,1);
+  transform-origin: center center;
+}
+
+/* overlay hidden by default (for hover) */
+.thumb-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 8, 10, 0.32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  backdrop-filter: blur(3px);
+  transition: opacity 0.28s ease, backdrop-filter 0.28s ease;
+}
+
+/* overlay content */
+.overlay-content {
+  display: flex;
+  gap: 8px;
+}
+
+/* Continue button inside overlay */
+.overlay-btn {
+  background: rgba(255,255,255,0.95);
+  color: #0f172a;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.08);
+}
+
+/* project info */
+.project-info {
+  padding: 12px 14px;
+}
+
+.project-name {
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #0f172a;
+}
+
+.project-meta {
+  font-size: 13px;
+  color: #57606a;
+}
+
+/* HOVER: combine slight zoom + overlay fade-in */
+.project-card:hover .thumb {
+  transform: scale(1.06);
+}
+.project-card:hover .thumb-overlay {
+  opacity: 1;
+  backdrop-filter: blur(4px);
+}
+
+/* small screens tweak */
+@media (max-width: 480px) {
+  .thumb-wrap { height: 150px; }
+  .dashboard-title { font-size: 22px; }
+  .btn-primary, .btn-secondary { padding: 8px 12px; font-size: 14px; }
+}
+
+.recent-container {
+  background: #fff;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  padding: 24px 28px;
+  margin-top: 60px;  /* SPUSTENO */
+  box-shadow: 0 1px 0 rgba(27, 31, 36, 0.04);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 U LINIJU GARANT */
+  gap: 20px;
+}
+
+.project-card {
+  position: relative;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow 0.15s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.thumb-wrap {
+  height: 110px;
+  overflow: hidden;
+}
+
+.thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* OVERLAY */
+.thumb-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.project-card:hover .thumb-overlay {
+  opacity: 1;
+}
+
+.overlay-btn {
+  background: #fff;
+  color: #2da44e;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.project-info {
+  padding: 12px;
+}
+
+.project-name {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.project-meta {
+  font-size: 12px;
+  color: #57606a;
+}
+
+
+
+
+
+
+
