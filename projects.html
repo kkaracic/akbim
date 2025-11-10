@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+  <script src="hamburger.js" defer></script>
+  <script src="projects.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="assets/favcon.png">
+
+</head>
+<body>
+
+  <nav>
+        <!--<div class="logo">AK BIM</div> -->
+        <img class="logo logo-default" src="assets/grey.png" alt="Logo">
+        <img class="logo logo-scrolled" src="assets/black.png" alt="Scrolled Logo">
+        <ul class="nav-links">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="#projectss">Projects</a></li>
+          <li><a href="index.html#what-we-do">Services</a></li>
+          <li><a href="index.html#soft">Softwares</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      
+    
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile menu (hidden on desktop) -->
+    <div id="mobile-menu" class="mobile-menu" hidden>
+      <ul>
+        <li><a href="/index.html#home">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+          <li><a href="#projectss">Projects</a></li>
+          <li><a href="index.html#what-we-do">Services</a></li>
+          <li><a href="index.html#soft">Softwares</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+
+  <section class="projects-gallery" id="projectss">
+    <h2>Our Projects</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="assets/1.png" alt="Commercial Building">
+        <div class="caption">Shopping mall with Solar Power Plant</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/2.png" alt="Industrial Facility">
+        <div class="caption">Light distribution analysis</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/3.jpg" alt="Residential Complex">
+        <div class="caption">3D render of a room with electrical installations</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/4.png" alt="Infrastructure Model">
+        <div class="caption">3D analysis of sockets and lighting distribution</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/5.png" alt="Infrastructure Model">
+        <div class="caption">3D render of cable trays and lighting</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/6.png" alt="Infrastructure Model">
+        <div class="caption">Infrastructure Model</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/7.jpg" alt="Infrastructure Model">
+        <div class="caption">Infrastructure Model</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/8.png" alt="Infrastructure Model">
+        <div class="caption">Infrastructure Model</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/9.png" alt="Infrastructure Model">
+        <div class="caption">Infrastructure Model</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/10.png" alt="Infrastructure Model">
+        <div class="caption">Infrastructure Model</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/11.png" alt="Infrastructure Model">
+        <div class="caption">Infrastructure Model</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/12.png" alt="Infrastructure Model">
+        <div class="caption">Infrastructure Model</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/projects/project4.jpg" alt="Infrastructure Model">
+        <div class="caption">Infrastructure Model</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/projects/project4.jpg" alt="Infrastructure Model">
+        <div class="caption">Infrastructure Model</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/projects/project4.jpg" alt="Infrastructure Model">
+        <div class="caption">Infrastructure Model</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/projects/project4.jpg" alt="Infrastructure Model">
+        <div class="caption">Infrastructure Model</div>
+      </div>
+      <!-- Add up to 15 items total -->
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+    <div id="caption"></div>
+  </div>
+
+
+  <!-- Modals -->
+  <div class="modal" id="modal-1">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Solar Plant Sarajevo</h3>
+      <img src="assets/project1.jpg" alt="Details 1" />
+      <p>This project involved a complete layout, inverter spec, and energy yield simulation for a 300kW plant near Sarajevo.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-2">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Commercial Office BIM</h3>
+      <img src="assets/project2.jpg" alt="Details 2" />
+      <p>We developed a full BIM model for electrical installation in a modern office building, including lighting, sockets, and cable trays.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-3">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Factory Lighting Design</h3>
+      <img src="assets/project3.jpg" alt="Details 3" />
+      <p>High-bay LED lighting layout and lighting level compliance using DIALux Evo for a 2000m² factory floor.</p>
+    </div>
+  </div>
+
+  <footer>
+  <div class="footer-content">
+    
+    <!-- Left: Logo -->
+    <div class="footer-section footer-left">
+      <img src="assets/white.png" alt="Company Logo" class="footer-logo">
+    </div>
+
+    <!-- Middle: Links -->
+    <div class="footer-section footer-middle">
+      <h4 class="footer-label">Links</h4>
+      <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="#projectss">Projects</a></li>
+        <li><a href="index.html#what-we-do">Services</a></li>
+        <li><a href="index.html#soft">Softwares</a></li>
+        <li><a href="index.hmtl#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Right: Socials -->
+      <div class="footer-section footer-right">
+      <h4 class="footer-label">Social Media</h4>
+     
+      <div class="social-icons">
+        <a href="https://www.facebook.com/people/AK-BIM/61581003101653/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/akbim_bh/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/109107910" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 AK BIM. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentPath = window.location.pathname;
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      const href = link.getAttribute("href");
+
+      if (href.includes("projects") && currentPath.includes("projects")) {
+        link.classList.add("active");
+      } else if (href === "#home" && currentPath === "/") {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
+
