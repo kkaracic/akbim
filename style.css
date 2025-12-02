@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: 'Helvetica Neue', sans-serif;
     line-height: 1.6;
+    overflow-x: hidden;
   }
   
   .hero {
@@ -1328,5 +1329,6 @@ section {
   color: #ddd; /* lagana bijela / siva */
   margin-top: 5px;
 }
+
 
 
