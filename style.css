@@ -518,12 +518,6 @@ nav.scrolled .nav-links a {
 
 }
 
-img{
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
 /* Section titles */
 .section-title {
   font-size: 2.5rem;
@@ -1336,6 +1330,7 @@ section {
   color: #ddd; /* lagana bijela / siva */
   margin-top: 5px;
 }
+
 
 
 
