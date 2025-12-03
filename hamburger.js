@@ -85,6 +85,18 @@ hamburger.addEventListener('click', () => {
   window.addEventListener("scroll", setActiveLink);
   setActiveLink();
 });
+document.addEventListener("click", function (e) {
+  const hamburger = document.querySelector(".hamburger");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  // Ako je meni otvoren i klikne se nešto što NIJE meni ni hamburger → zatvori
+  if (mobileMenu.classList.contains("open")) {
+    if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+      mobileMenu.classList.remove("open");
+    }
+  }
+});
 
   
   AOS.init();
+
