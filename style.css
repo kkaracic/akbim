@@ -516,12 +516,13 @@ nav.scrolled .nav-links a {
     transform: translateX(0) !important;
   }
 
-    img{
+}
+
+img{
     max-width: 100%;
     height: auto;
     display: block;
   }
-}
 
 /* Section titles */
 .section-title {
@@ -1335,6 +1336,7 @@ section {
   color: #ddd; /* lagana bijela / siva */
   margin-top: 5px;
 }
+
 
 
 
