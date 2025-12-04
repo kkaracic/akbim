@@ -424,6 +424,7 @@ nav.scrolled .nav-links a {
     text-align: center;
     padding-top: 120px; /* dovoljno da navbar ne preklapa */
     max-width: 100%;
+    width: 100%;
   }
 
   .hero h1 {
@@ -1331,6 +1332,7 @@ section {
   color: #ddd; /* lagana bijela / siva */
   margin-top: 5px;
 }
+
 
 
 
