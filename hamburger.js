@@ -97,6 +97,15 @@ document.addEventListener("click", function (e) {
   }
 });
 
+// Close mobile menu when clicking any link inside it
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.remove('open');
+    document.querySelector('.hamburger').classList.remove('open');
+  });
+});
+
   
   AOS.init();
+
 
